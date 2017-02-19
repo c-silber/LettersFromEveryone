@@ -16,7 +16,9 @@ Including another URLconf
 from django.conf.urls import include, url
 from django.contrib import admin
 
+import owls.views
+
 urlpatterns = [
-	url(r'^owls/', include('owls.urls')),
+    url(r'^owls/$', owls.views.index, name='index'),
     url(r'^admin/', admin.site.urls),
 ]

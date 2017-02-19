@@ -1,6 +1,8 @@
-from django.shortcuts import render
-from django.http import HttpResponse
+from django.shortcuts import get_object_or_404, get_list_or_404, render
+from django.http import HttpResponseBadRequest, HttpResponse, Http404
+from django.template import loader
 
 # Create your views here.
 def index(request):
-	return HttpResponse("Hello, world. You're at the owls index.")
+	template=loader.get_template('index.html')
+	return HttpResponse(template.render())
