@@ -6,4 +6,4 @@ Boom.
 
 ## Get started
 
-Fill out your info at our website, then we'll do the rest.
+Fill out your info at our website, then we'll do the rest. That's it.
