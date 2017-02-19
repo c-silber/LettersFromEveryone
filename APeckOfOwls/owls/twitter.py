@@ -16,28 +16,18 @@ ACCESS_SECRET = 'xrAZI6ikzaFYXJADNJjs5ASlxvSkSuoh6znXkAqzyBlXX'
 sys.path.insert(0, os.path.abspath(__file__+'../../..'))
 lob.api_key = "test_f80325b79c77e12660e66d2840b1987de6e" ## Find out the actual API key.
 
-example_address = lob.Address.create(
-    name = 'Joe Smith',
-    description = 'Joe - Home',
+test_address = lob.Address.create(
+    name = 'Chris Collins',
+    description = 'Chris Collins Address',
     metadata = {
         'group': 'Members'
     },
-    address_line1 = '104, Printing Boulevard',
-    address_city = 'Boston',
-    address_state = 'MA',
+    address_line1 = 'Wehrle Drive',
+    address_city = 'Williamsville',
+    address_state = 'NY',
     address_country = 'US',
-    address_zip = '12345'
+    address_zip = '14221'
 )
-
-print "\n"
-print "Address Response"
-print "\n"
-print "======================================================="
-print "\n"
-print example_address
-print "\n"
-print "======================================================="
-print "\n"
 
 
 
@@ -64,19 +54,19 @@ for i in range (0, 16):
 			## Trigger Lob API to send a postcard.
 			print 'Sending a postcard.'
 
-			example_postcard = lob.Postcard.create(
-			    description = 'Test Postcard',
+			test_postcard = lob.Postcard.create(
+			    description = 'Postcard to Representative',
 			    metadata = {
 			        'campaign': 'Member welcome'
 			    },
-			    to_address = example_address,
-			    from_address = example_address,
+			    to_address = test_address,
+			    from_address = test_address,
 			    front = """
 			      <html>
 			        <head>
 			          <style>
 			            @font-face {
-			              font-family: 'Loved by the King';
+			              font-family: 'Roboto';
 			              src: url('https://s3-us-west-2.amazonaws.com/lob-assets/LovedbytheKing.ttf');
 			            }
 			          </style>
@@ -84,16 +74,16 @@ for i in range (0, 16):
 			        <body><h1>Hi {{name}}</h1></body>
 			      </html>""",
 			    data = {
-			        'name': example_address.name
+			        'name': test_address.name
 			    },
-			    message = "Welcome to the club!"
+			    message = "To Whom it May Concern, Women are people too.",
 			)
 
 			print "Postcard Response"
 			print "\n"
 			print "======================================================="
 			print "\n"
-			print example_postcard
+			print test_address
 			print "\n"
 			print "======================================================="
 			print "\n"
