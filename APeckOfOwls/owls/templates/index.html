@@ -1,50 +1,45 @@
 <!doctype html>
 <html>
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="description" content="A front-end template that helps you build fast, modern mobile web apps.">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
-    <title>Material Design Lite</title>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="description" content="A front-end template that helps you build fast, modern mobile web apps.">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+  <title>Material Design Lite</title>
 
-    <!-- Add to homescreen for Chrome on Android -->
-    <meta name="mobile-web-app-capable" content="yes">
-    <link rel="icon" sizes="192x192" href="static/android-desktop.png">
+  <!-- Add to homescreen for Chrome on Android -->
+  <meta name="mobile-web-app-capable" content="yes">
+  <link rel="icon" sizes="192x192" href="static/android-desktop.png">
 
-    <!-- Add to homescreen for Safari on iOS -->
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black">
-    <meta name="apple-mobile-web-app-title" content="Material Design Lite">
-    <link rel="apple-touch-icon-precomposed" href="static/ios-desktop.png">
+  <!-- Add to homescreen for Safari on iOS -->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="apple-mobile-web-app-title" content="Material Design Lite">
+  <link rel="apple-touch-icon-precomposed" href="static/ios-desktop.png">
 
-    <!-- Tile icon for Win8 (144x144 + tile color) -->
-    <meta name="msapplication-TileImage" content="images/touch/ms-touch-icon-144x144-precomposed.png">
-    <meta name="msapplication-TileColor" content="#3372DF">
+  <!-- Tile icon for Win8 (144x144 + tile color) -->
+  <meta name="msapplication-TileImage" content="images/touch/ms-touch-icon-144x144-precomposed.png">
+  <meta name="msapplication-TileColor" content="#3372DF">
 
-    <link rel="shortcut icon" href="favicon.png">
+  <link rel="shortcut icon" href="favicon.png">
 
-    <!-- SEO: If your mobile URL is different from the desktop URL, add a canonical link to the desktop page https://developers.google.com/webmasters/smartphone-sites/feature-phones -->
-    <!--
-    <link rel="canonical" href="http://www.example.com/">
-    -->
-
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:regular,bold,italic,thin,light,bolditalic,black,medium&amp;lang=en">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-    <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.grey-orange.min.css">
-    <link rel="stylesheet" href="styles.css">
-    {% load static %}
-    <link rel="{% static 'road.png' %}" href="{% static 'road.png' %}"/>
-    <style>
-    #view-source {
-      position: fixed;
-      display: block;
-      right: 0;
-      bottom: 0;
-      margin-right: 40px;
-      margin-bottom: 40px;
-      z-index: 900;
-    }
-    body::before {
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:regular,bold,italic,thin,light,bolditalic,black,medium&amp;lang=en">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.grey-orange.min.css">
+  <link rel="stylesheet" href="styles.css">
+  {% load static %}
+  <link rel="{% static 'road.png' %}" href="{% static 'road.png' %}"/>
+  <style>
+  #view-source {
+    position: fixed;
+    display: block;
+    right: 0;
+    bottom: 0;
+    margin-right: 40px;
+    margin-bottom: 40px;
+    z-index: 900;
+  }
+  body::before {
     background-size: cover;
     background-attachment: fixed;
     content: '';
@@ -55,343 +50,343 @@
     bottom: 0;
     top: 0;
     position: fixed;
-}
-@media (max-width: 512px)  and (-webkit-min-device-pixel-ratio: 1.5),
-       (max-width: 512px)  and (min-resolution: 1.5dppx),
-       (max-width: 1024px) and (-webkit-max-device-pixel-ratio: 1.5),
-       (max-width: 1024px) and (max-resolution: 1.5dppx) {
-  body::before {
-    background-image: url('bg_1024.jpg');
   }
-}
-@media (min-width: 513px)  and (max-width: 1024px) and (-webkit-min-device-pixel-ratio: 1.5),
-       (min-width: 513px)  and (max-width: 1024px) and (min-resolution: 1.5dppx),
-       (min-width: 1025px) and (max-width: 2048px) and (-webkit-max-device-pixel-ratio: 1.5),
-       (min-width: 1025px) and (max-width: 2048px) and (max-resolution: 1.5dppx)  {
-  body::before {
-    background-image: url('bg_2048.jpg');
+  @media (max-width: 512px)  and (-webkit-min-device-pixel-ratio: 1.5),
+  (max-width: 512px)  and (min-resolution: 1.5dppx),
+  (max-width: 1024px) and (-webkit-max-device-pixel-ratio: 1.5),
+  (max-width: 1024px) and (max-resolution: 1.5dppx) {
+    body::before {
+      background-image: url('bg_1024.jpg');
+    }
   }
-}
-@media (min-width: 1025px) and (-webkit-min-device-pixel-ratio: 1.5),
-       (min-width: 1025px) and (min-resolution: 1.5dppx),
-       (min-width: 2049px) and (-webkit-max-device-pixel-ratio: 1.5),
-       (min-width: 2049px) and (max-resolution: 1.5dppx) {
-  body::before {
-    background-image: url('bg_2880.jpg');
+  @media (min-width: 513px)  and (max-width: 1024px) and (-webkit-min-device-pixel-ratio: 1.5),
+  (min-width: 513px)  and (max-width: 1024px) and (min-resolution: 1.5dppx),
+  (min-width: 1025px) and (max-width: 2048px) and (-webkit-max-device-pixel-ratio: 1.5),
+  (min-width: 1025px) and (max-width: 2048px) and (max-resolution: 1.5dppx)  {
+    body::before {
+      background-image: url('bg_2048.jpg');
+    }
   }
-}
-body .demo-blog {
-  font-family: 'Roboto', 'Helvetica', sans-serif;
-}
+  @media (min-width: 1025px) and (-webkit-min-device-pixel-ratio: 1.5),
+  (min-width: 1025px) and (min-resolution: 1.5dppx),
+  (min-width: 2049px) and (-webkit-max-device-pixel-ratio: 1.5),
+  (min-width: 2049px) and (max-resolution: 1.5dppx) {
+    body::before {
+      background-image: url('bg_2880.jpg');
+    }
+  }
+  body .demo-blog {
+    font-family: 'Roboto', 'Helvetica', sans-serif;
+  }
 
-.demo-blog .demo-blog__posts {
-  max-width: 900px;
-  padding: 0;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  width: 100%;
-  margin: 0 auto;
-  -webkit-flex-shrink: 0;
-      -ms-flex-negative: 0;
-          flex-shrink: 0;
-}
+  .demo-blog .demo-blog__posts {
+    max-width: 900px;
+    padding: 0;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    width: 100%;
+    margin: 0 auto;
+    -webkit-flex-shrink: 0;
+    -ms-flex-negative: 0;
+    flex-shrink: 0;
+  }
 
-.demo-blog.mdl-layout .mdl-layout__content {
-  padding-top: 230px;
-  position: relative;
-  -webkit-overflow-scrolling: touch;
-}
-.demo-blog .mdl-card {
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: column;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-align-items: stretch;
-      -ms-flex-align: stretch;
-          align-items: stretch;
-  min-height: 360px;
-}
-.demo-blog .mdl-card__title {
-  padding: 16px;
-  -webkit-flex-grow: 1;
-      -ms-flex-positive: 1;
-          flex-grow: 1;
-}
-.demo-blog .mdl-card__media {
-  box-sizing: border-box;
-  background-size: cover;
-  padding: 24px;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-grow: 1;
-      -ms-flex-positive: 1;
-          flex-grow: 1;
-  -webkit-flex-direction: row;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-align-items: flex-end;
-      -ms-flex-align: end;
-          align-items: flex-end;
-  cursor: pointer;
-}
-.demo-blog .mdl-card__media a,
-.demo-blog .mdl-card__title a {
-  color: inherit;
-}
-.demo-blog .mdl-card__supporting-text {
-  width: 100%;
-  padding: 16px;
-  min-height: 64px;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-.demo-blog .mdl-card__supporting-text strong {
-  font-weight: 400;
-}
-.demo-blog .mdl-card__media ~ .mdl-card__supporting-text {
-  min-height: 64px;
-}
-.demo-blog .mdl-card__supporting-text:not(:last-child) {
-  box-sizing: border-box;
-  min-height: 76px;
-}
-.demo-blog:not(.demo-blog--blogpost) .mdl-card__supporting-text ~ .mdl-card__supporting-text {
-  border-top: 1px solid rgba(0,0,0,0.1);
-}
+  .demo-blog.mdl-layout .mdl-layout__content {
+    padding-top: 230px;
+    position: relative;
+    -webkit-overflow-scrolling: touch;
+  }
+  .demo-blog .mdl-card {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-align-items: stretch;
+    -ms-flex-align: stretch;
+    align-items: stretch;
+    min-height: 360px;
+  }
+  .demo-blog .mdl-card__title {
+    padding: 16px;
+    -webkit-flex-grow: 1;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+  }
+  .demo-blog .mdl-card__media {
+    box-sizing: border-box;
+    background-size: cover;
+    padding: 24px;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-grow: 1;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-align-items: flex-end;
+    -ms-flex-align: end;
+    align-items: flex-end;
+    cursor: pointer;
+  }
+  .demo-blog .mdl-card__media a,
+  .demo-blog .mdl-card__title a {
+    color: inherit;
+  }
+  .demo-blog .mdl-card__supporting-text {
+    width: 100%;
+    padding: 16px;
+    min-height: 64px;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+  .demo-blog .mdl-card__supporting-text strong {
+    font-weight: 400;
+  }
+  .demo-blog .mdl-card__media ~ .mdl-card__supporting-text {
+    min-height: 64px;
+  }
+  .demo-blog .mdl-card__supporting-text:not(:last-child) {
+    box-sizing: border-box;
+    min-height: 76px;
+  }
+  .demo-blog:not(.demo-blog--blogpost) .mdl-card__supporting-text ~ .mdl-card__supporting-text {
+    border-top: 1px solid rgba(0,0,0,0.1);
+  }
 
-.demo-blog .mdl-card__actions:first-child {
-  margin-left: 0;
-}
-.demo-blog .meta {
-  box-sizing: border-box;
-  padding: 16px;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: row;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-align-items: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-justify-content: flex-start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
-  height: auto;
-}
-.demo-blog .meta > .meta__favorites{
-  -webkit-flex-direction: row;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  margin: 0 8px;
-  font-size: 13px;
-  font-weight: 500;
-}
-.demo-blog .meta > .meta__favorites .material-icons {
-  font-size: 2em;
-  cursor: pointer;
-  margin-left: 12px;
-}
-.demo-blog .mdl-card .meta.meta--fill {
-  -webkit-justify-content: space-between;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-}
-.demo-blog .meta > *:first-child {
-  margin-right: 16px;
-}
-.demo-blog .meta > * {
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: column;
-      -ms-flex-direction: column;
-          flex-direction: column;
-}
-.demo-blog.is-small-screen .demo-blog__posts > .mdl-card.coffee-pic {
-  -webkit-order: 0;
-      -ms-flex-order: 0;
-          order: 0;
-}
-.demo-blog.is-small-screen .demo-blog__posts > .mdl-card.something-else {
-  -webkit-order: -1;
-      -ms-flex-order: -1;
-          order: -1;
-}
-.demo-blog .coffee-pic .mdl-card__media {
-  background-image: url('https://source.unsplash.com/jk8rarn6lmw/1600x900');
-}
-.demo-blog .something-else .mdl-card__media {
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: column;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-justify-content: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-align-items: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-.demo-blog .something-else > button {
-  position: absolute;
-  top: 0;
-  right: 28px;
-  -webkit-transform: translate(0px, -28px);
-          transform: translate(0px, -28px);
-}
-.demo-blog .something-else .mdl-card__media {
-  font-size: 13px;
-  font-weight: 500;
-  border-top-left-radius: 2px;
-  border-top-right-radius: 2px;
-}
-.demo-blog .something-else .mdl-card__media img {
-  width: 64px;
-  height: 64px;
-  margin-bottom: 10px;
-}
-.demo-blog .something-else .mdl-card__supporting-text {
-  background-color: #F5F5F5;
-  border-bottom-left-radius: 2px;
-  border-bottom-right-radius: 2px;
-}
-.demo-blog .on-the-road-again .mdl-card__media {
-  background-image: url('road.jpg');
-}
-.demo-blog .shopping .mdl-card__media {
-  background-image: url('shopping.jpg');
-}
-.demo-blog .demo-blog__posts > .demo-nav {
-  margin: 12px 15px;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: row;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-justify-content: space-between;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-align-items: center;
-      -ms-flex-align: center;
-          align-items: center;
-  color: white;
-  font-weight: 500;
-}
-.demo-blog .demo-blog__posts > .demo-nav > .demo-nav__button {
-  color: white;
-  text-decoration: none;
-}
-.demo-blog .demo-blog__posts > .demo-nav .mdl-button {
-  color: rgba(0,0,0,0.54);
-  background-color: white;
-}
-.demo-blog .demo-blog__posts > .demo-nav > .demo-nav__button:first-child .mdl-button {
-  margin-right: 16px;
-}
-.demo-blog .demo-blog__posts > .demo-nav > .demo-nav__button:last-child .mdl-button {
-  margin-left: 16px;
-}
-.demo-blog .mdl-card > a {
-  color: inherit;
-  text-decoration: none;
-  font-weight: inherit;
-}
-.demo-blog .mdl-card h3 {
-  margin: 0;
-}
-.demo-blog .mdl-card h3 a {
-  text-decoration: none;
-}
-.demo-blog .mdl-card h3.quote:before, .demo-blog .mdl-card h3.quote:after {
-  display: block;
-  font-size: 3em;
-  margin-top: 0.5em;
-}
-.demo-blog .mdl-card h3.quote:before {
-  content: '“';
-}
-.demo-blog .mdl-card h3.quote:after {
-  content: '”';
-}
-.demo-blog--blogpost .custom-header {
-  background-color: transparent;
-}
-.demo-blog--blogpost .demo-blog__posts > .mdl-card .mdl-card__media {
-  background-image: url('images/road_big.jpg');
-  height: 280px;
-}
-.demo-blog--blogpost .comments {
-  background-color: #EEE;
-}
-.demo-blog--blogpost .meta > * {
-  -webkit-align-items: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-.demo-blog--blogpost .meta + .mdl-card__supporting-text {
-  border: 0;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: column;
-      -ms-flex-direction: column;
-          flex-direction: column;
-}
-.demo-blog--blogpost .meta + .mdl-card__supporting-text p {
-  max-width: 512px;
-  margin: 16px auto;
-  font-size: 16px;
-  line-height: 28px;
-}
+  .demo-blog .mdl-card__actions:first-child {
+    margin-left: 0;
+  }
+  .demo-blog .meta {
+    box-sizing: border-box;
+    padding: 16px;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-justify-content: flex-start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+    height: auto;
+  }
+  .demo-blog .meta > .meta__favorites{
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    margin: 0 8px;
+    font-size: 13px;
+    font-weight: 500;
+  }
+  .demo-blog .meta > .meta__favorites .material-icons {
+    font-size: 2em;
+    cursor: pointer;
+    margin-left: 12px;
+  }
+  .demo-blog .mdl-card .meta.meta--fill {
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+  }
+  .demo-blog .meta > *:first-child {
+    margin-right: 16px;
+  }
+  .demo-blog .meta > * {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+  .demo-blog.is-small-screen .demo-blog__posts > .mdl-card.coffee-pic {
+    -webkit-order: 0;
+    -ms-flex-order: 0;
+    order: 0;
+  }
+  .demo-blog.is-small-screen .demo-blog__posts > .mdl-card.something-else {
+    -webkit-order: -1;
+    -ms-flex-order: -1;
+    order: -1;
+  }
+  .demo-blog .coffee-pic .mdl-card__media {
+    background-image: url('https://source.unsplash.com/jk8rarn6lmw/1600x900');
+  }
+  .demo-blog .something-else .mdl-card__media {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+  .demo-blog .something-else > button {
+    position: absolute;
+    top: 0;
+    right: 28px;
+    -webkit-transform: translate(0px, -28px);
+    transform: translate(0px, -28px);
+  }
+  .demo-blog .something-else .mdl-card__media {
+    font-size: 13px;
+    font-weight: 500;
+    border-top-left-radius: 2px;
+    border-top-right-radius: 2px;
+  }
+  .demo-blog .something-else .mdl-card__media img {
+    width: 64px;
+    height: 64px;
+    margin-bottom: 10px;
+  }
+  .demo-blog .something-else .mdl-card__supporting-text {
+    background-color: #F5F5F5;
+    border-bottom-left-radius: 2px;
+    border-bottom-right-radius: 2px;
+  }
+  .demo-blog .on-the-road-again .mdl-card__media {
+    background-image: url('road.jpg');
+  }
+  .demo-blog .shopping .mdl-card__media {
+    background-image: url('shopping.jpg');
+  }
+  .demo-blog .demo-blog__posts > .demo-nav {
+    margin: 12px 15px;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    color: white;
+    font-weight: 500;
+  }
+  .demo-blog .demo-blog__posts > .demo-nav > .demo-nav__button {
+    color: white;
+    text-decoration: none;
+  }
+  .demo-blog .demo-blog__posts > .demo-nav .mdl-button {
+    color: rgba(0,0,0,0.54);
+    background-color: white;
+  }
+  .demo-blog .demo-blog__posts > .demo-nav > .demo-nav__button:first-child .mdl-button {
+    margin-right: 16px;
+  }
+  .demo-blog .demo-blog__posts > .demo-nav > .demo-nav__button:last-child .mdl-button {
+    margin-left: 16px;
+  }
+  .demo-blog .mdl-card > a {
+    color: inherit;
+    text-decoration: none;
+    font-weight: inherit;
+  }
+  .demo-blog .mdl-card h3 {
+    margin: 0;
+  }
+  .demo-blog .mdl-card h3 a {
+    text-decoration: none;
+  }
+  .demo-blog .mdl-card h3.quote:before, .demo-blog .mdl-card h3.quote:after {
+    display: block;
+    font-size: 3em;
+    margin-top: 0.5em;
+  }
+  .demo-blog .mdl-card h3.quote:before {
+    content: '“';
+  }
+  .demo-blog .mdl-card h3.quote:after {
+    content: '”';
+  }
+  .demo-blog--blogpost .custom-header {
+    background-color: transparent;
+  }
+  .demo-blog--blogpost .demo-blog__posts > .mdl-card .mdl-card__media {
+    background-image: url('images/road_big.jpg');
+    height: 280px;
+  }
+  .demo-blog--blogpost .comments {
+    background-color: #EEE;
+  }
+  .demo-blog--blogpost .meta > * {
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+  .demo-blog--blogpost .meta + .mdl-card__supporting-text {
+    border: 0;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+  .demo-blog--blogpost .meta + .mdl-card__supporting-text p {
+    max-width: 512px;
+    margin: 16px auto;
+    font-size: 16px;
+    line-height: 28px;
+  }
 
-.demo-blog--blogpost .comments {
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: column;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-justify-content: flex-start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
-  -webkit-align-items: stretch;
-      -ms-flex-align: stretch;
-          align-items: stretch;
-  padding: 32px;
-  box-sizing: border-box;
-}
-.demo-blog--blogpost .comments > form {
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: row;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  margin-bottom: 16px;
-}
-.demo-blog--blogpost .comments > form .mdl-textfield {
-  -webkit-flex-grow: 1;
-      -ms-flex-positive: 1;
-          flex-grow: 1;
-  margin-right: 16px;
-  color: rgb(97, 97, 97);
-}
+  .demo-blog--blogpost .comments {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-justify-content: flex-start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+    -webkit-align-items: stretch;
+    -ms-flex-align: stretch;
+    align-items: stretch;
+    padding: 32px;
+    box-sizing: border-box;
+  }
+  .demo-blog--blogpost .comments > form {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    margin-bottom: 16px;
+  }
+  .demo-blog--blogpost .comments > form .mdl-textfield {
+    -webkit-flex-grow: 1;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+    margin-right: 16px;
+    color: rgb(97, 97, 97);
+  }
 /* Workaround for Firefox.
  * User agent stylesheet kept overwriting the font in FF only.
  */
-.demo-blog--blogpost .comments > form .mdl-textfield .mdl-textfield__input {
+ .demo-blog--blogpost .comments > form .mdl-textfield .mdl-textfield__input {
   font-family: 'Roboto', 'Helvetica', sans-serif;
 }
 .demo-blog--blogpost .comments > form .mdl-textfield input,
@@ -408,22 +403,22 @@ body .demo-blog {
   display: -ms-flexbox;
   display: flex;
   -webkit-flex-direction: column;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   -webkit-align-items: stretch;
-      -ms-flex-align: stretch;
-          align-items: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
 }
 .demo-blog--blogpost .comments .comment > .comment__header {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   -webkit-flex-direction: row;
-      -ms-flex-direction: row;
-          flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
   -webkit-align-items: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   margin-bottom: 16px;
 }
 .demo-blog--blogpost .comments .comment > .comment__header > .comment__avatar {
@@ -434,14 +429,14 @@ body .demo-blog {
 }
 .demo-blog--blogpost .comments .comment > .comment__header > .comment__author {
   -webkit-flex-grow: 1;
-      -ms-flex-positive: 1;
-          flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   -webkit-flex-direction: column;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
 }
 .demo-blog--blogpost .comments .comment > .comment__text {
   line-height: 1.5em;
@@ -451,14 +446,14 @@ body .demo-blog {
   display: -ms-flexbox;
   display: flex;
   -webkit-flex-direction: row;
-      -ms-flex-direction: row;
-          flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
   -webkit-justify-content: flex-start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
   -webkit-align-items: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   font-size: 0.8em;
   margin-top: 16px;
 }
@@ -480,8 +475,8 @@ body .demo-blog {
 }
 .demo-blog .section-spacer {
   -webkit-flex-grow: 1;
-      -ms-flex-positive: 1;
-          flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
 }
 .demo-blog .something-else {
   overflow: visible;
@@ -539,168 +534,109 @@ body .demo-blog {
   height: 120px;
   padding: 40px;
   -webkit-align-items: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   background-color: white;
   box-sizing: border-box;
 }
-    </style>
+</style>
 
 </head>
 <body>
-	
-	<h2>Hello World!</h2>
-<<<<<<< HEAD
-
-	<div class="demo-blog mdl-layout mdl-js-layout has-drawer is-upgraded">
-      <main class="mdl-layout__content">
-      {% load static %}
-      <img src="{% static 'girls-bg.jpg' %}" alt="Girls background"/>
-        <div class="demo-blog__posts mdl-grid">
-          <div class="mdl-card coffee-pic mdl-cell mdl-cell--8-col">
-            <div class="mdl-card__media mdl-color-text--grey-50">
-            {% load static %}
-              <img src="{% static 'logo.png' %}" alt="Coffee"/>
-              {% load static %}
-              <img src="{% static 'coffee.jpg' %}" alt="My image"/>
-              {% load static %}
-              <img src="{% static 'avatar.png' %}" alt="Avatar"/>
-              <h3><a href="entry.html">Coffee Pic</a></h3>
-            </div>
-            <div class="mdl-card__supporting-text meta mdl-color-text--grey-600">
-              <div class="minilogo"></div>
-              <div>
-                <strong>The Newist</strong>
-                <span>2 days ago</span>
-              </div>
-            </div>
-          </div>
-          <div class="mdl-card something-else mdl-cell mdl-cell--8-col mdl-cell--4-col-desktop">
-            <button class="mdl-button mdl-js-ripple-effect mdl-js-button mdl-button--fab mdl-color--accent">
-              <i class="material-icons mdl-color-text--white" role="presentation">add</i>
-              <span class="visuallyhidden">add</span>
-            </button>
-            <div class="mdl-card__media mdl-color--white mdl-color-text--grey-600">
-            {% load static %}
-            <img src="{% static "logo.png" %}" alt="logo"/>
-              +1,337
-            </div>
-            <div class="mdl-card__supporting-text meta meta--fill mdl-color-text--grey-600">
-              <div>
-                <strong>The Newist</strong>
-              </div>
-              <ul class="mdl-menu mdl-js-menu mdl-menu--bottom-right mdl-js-ripple-effect" for="menubtn">
-                <li class="mdl-menu__item">About</li>
-                <li class="mdl-menu__item">Message</li>
-                <li class="mdl-menu__item">Favorite</li>
-                <li class="mdl-menu__item">Search</li>
-              </ul>
-              <button id="menubtn" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
-                <i class="material-icons" role="presentation">more_vert</i>
-                <span class="visuallyhidden">show menu</span>
-              </button>
-            </div>
-          </div>
-          <div class="mdl-card on-the-road-again mdl-cell mdl-cell--12-col">
-            <div class="mdl-card__media mdl-color-text--grey-50">
-              <h3><a href="entry.html">On the road again</a></h3>
-            </div>
-            <div class="mdl-color-text--grey-600 mdl-card__supporting-text">
-              Enim labore aliqua consequat ut quis ad occaecat aliquip incididunt. Sunt nulla eu enim irure enim nostrud aliqua consectetur ad consectetur sunt ullamco officia. Ex officia laborum et consequat duis.
-            </div>
-            <div class="mdl-card__supporting-text meta mdl-color-text--grey-600">
-              <div class="minilogo"></div>
-              <div>
-                <strong>The Newist</strong>
-                <span>2 days ago</span>
-              </div>
-            </div>
-          </div>
-          <div class="mdl-card amazing mdl-cell mdl-cell--12-col">
-            <div class="mdl-card__title mdl-color-text--grey-50">
-              <h3 class="quote"><a href="entry.html">I couldn’t take any pictures but this was an amazing thing…</a></h3>
-            </div>
-            <div class="mdl-card__supporting-text mdl-color-text--grey-600">
-              Enim labore aliqua consequat ut quis ad occaecat aliquip incididunt. Sunt nulla eu enim irure enim nostrud aliqua consectetur ad consectetur sunt ullamco officia. Ex officia laborum et consequat duis.
-            </div>
-            <div class="mdl-card__supporting-text meta mdl-color-text--grey-600">
-              <div class="minilogo"></div>
-              <div>
-                <strong>The Newist</strong>
-                <span>2 days ago</span>
-              </div>
-            </div>
-          </div>
-          <div class="mdl-card shopping mdl-cell mdl-cell--12-col">
-            <div class="mdl-card__media mdl-color-text--grey-50">
-              <h3><a href="entry.html">Shopping</a></h3>
-            </div>
-            <div class="mdl-card__supporting-text mdl-color-text--grey-600">
-              Enim labore aliqua consequat ut quis ad occaecat aliquip incididunt. Sunt nulla eu enim irure enim nostrud aliqua consectetur ad consectetur sunt ullamco officia. Ex officia laborum et consequat duis.
-            </div>
-            <div class="mdl-card__supporting-text meta mdl-color-text--grey-600">
-              <div class="minilogo"></div>
-              <div>
-                <strong>The Newist</strong>
-                <span>2 days ago</span>
-              </div>
-            </div>
-          </div>
-          <nav class="demo-nav mdl-cell mdl-cell--12-col">
-            <div class="section-spacer"></div>
-            <a href="entry.html" class="demo-nav__button" title="show more">
-              More
-              <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
-                <i class="material-icons" role="presentation">arrow_forward</i>
-              </button>
-            </a>
-          </nav>
-        </div>
-        <footer class="mdl-mini-footer">
-          <div class="mdl-mini-footer--left-section">
-            <button class="mdl-mini-footer--social-btn social-btn social-btn__twitter">
-              <span class="visuallyhidden">Twitter</span>
-            </button>
-            <button class="mdl-mini-footer--social-btn social-btn social-btn__blogger">
-              <span class="visuallyhidden">Facebook</span>
-            </button>
-            <button class="mdl-mini-footer--social-btn social-btn social-btn__gplus">
-              <span class="visuallyhidden">Google Plus</span>
-            </button>
-          </div>
-          <div class="mdl-mini-footer--right-section">
-            <button class="mdl-mini-footer--social-btn social-btn__share">
-              <i class="material-icons" role="presentation">share</i>
-              <span class="visuallyhidden">share</span>
-            </button>
-          </div>
-        </footer>
-      </main>
-      <div class="mdl-layout__obfuscator"></div>
+	<div class="mdl-layout mdl-js-layout">
+    <header class="mdl-layout__header">
+      <div class="mdl-layout__header-row">
+        <span class="mdl-layout-title">Letters For Everyone</span>
+        <div class="mdl-layout-spacer"></div>
+        <nav class="mdl-navigation">
+          <a class="mdl-navigation__link" href="#">Home</a>
+          <a class="mdl-navigation__link" href="#">About</a>
+          <a class="mdl-navigation__link" href="#">Contact</a>
+        </nav>
+      </div>
+    </header>
+    <div class="mdl-layout__drawer">
+      <span class="mdl-layout-title">Letters For Everyone</span>
+      <nav class="mdl-navigation">
+        <a class="mdl-navigation__link" href="#">Home</a>
+        <a class="mdl-navigation__link" href="#">About</a>
+        <a class="mdl-navigation__link" href="#">Contact</a>
+      </nav>
     </div>
-    <a href="https://github.com/google/material-design-lite/blob/mdl-1.x/templates/blog/" target="_blank" id="view-source" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-color--accent mdl-color-text--white">View Source</a>
-    <script src="https://code.getmdl.io/1.3.0/material.min.js"></script>
-	
-</body>	
+      <main class="mdl-layout__content">
+        {% load static %}
+        <img src="{% static 'girls-bg.jpg' %}" alt="Girls background"/>
+        <div class="mdl-card on-the-road-again mdl-cell mdl-cell--12-col">
+          <div class="mdl-card__media mdl-color-text--grey-50">
+            <h3><a href="entry.html">On the road again</a></h3>
+          </div>
+          <div class="mdl-color-text--grey-600 mdl-card__supporting-text">
+            Enim labore aliqua consequat ut quis ad occaecat aliquip incididunt. Sunt nulla eu enim irure enim nostrud aliqua consectetur ad consectetur sunt ullamco officia. Ex officia laborum et consequat duis.
+          </div>
+          <div class="mdl-card__supporting-text meta mdl-color-text--grey-600">
+            <div class="minilogo"></div>
+            <div>
+              <strong>The Newist</strong>
+              <span>2 days ago</span>
+            </div>
+          </div>
+        </div>
+        <div class="mdl-card amazing mdl-cell mdl-cell--12-col">
+          <div class="mdl-card__title mdl-color-text--grey-50">
+            <h3 class="quote"><a href="entry.html">I couldn’t take any pictures but this was an amazing thing…</a></h3>
+          </div>
+          <div class="mdl-card__supporting-text mdl-color-text--grey-600">
+            Enim labore aliqua consequat ut quis ad occaecat aliquip incididunt. Sunt nulla eu enim irure enim nostrud aliqua consectetur ad consectetur sunt ullamco officia. Ex officia laborum et consequat duis.
+          </div>
+          <div class="mdl-card__supporting-text meta mdl-color-text--grey-600">
+            <div class="minilogo"></div>
+            <div>
+              <strong>The Newist</strong>
+              <span>2 days ago</span>
+            </div>
+          </div>
+        </div>
+        <div class="mdl-card shopping mdl-cell mdl-cell--12-col">
+          <div class="mdl-card__media mdl-color-text--grey-50">
+            <h3><a href="entry.html">Shopping</a></h3>
+          </div>
+          <div class="mdl-card__supporting-text mdl-color-text--grey-600">
+            Enim labore aliqua consequat ut quis ad occaecat aliquip incididunt. Sunt nulla eu enim irure enim nostrud aliqua consectetur ad consectetur sunt ullamco officia. Ex officia laborum et consequat duis.
+          </div>
+          <div class="mdl-card__supporting-text meta mdl-color-text--grey-600">
+            <div class="minilogo"></div>
+            <div>
+              <strong>The Newist</strong>
+              <span>2 days ago</span>
+            </div>
+          </div>
+        </div>
+        <nav class="demo-nav mdl-cell mdl-cell--12-col">
+          <div class="section-spacer"></div>
+          <a href="entry.html" class="demo-nav__button" title="show more">
+            More
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+              <i class="material-icons" role="presentation">arrow_forward</i>
+            </button>
+          </a>
+        </nav>
+    </main>
+  <script src="https://code.getmdl.io/1.3.0/material.min.js"></script>
 <script>
-    Array.prototype.forEach.call(document.querySelectorAll('.mdl-card__media'), function(el) {
-      var link = el.querySelector('a');
-      if(!link) {
-        return;
-      }
-      var target = link.getAttribute('href');
-      if(!target) {
-        return;
-      }
-      el.addEventListener('click', function() {
-        location.href = target;
-      });
-    });
-  </script>
-
+Array.prototype.forEach.call(document.querySelectorAll('.mdl-card__media'), function(el) {
+  var link = el.querySelector('a');
+  if(!link) {
+    return;
+  }
+  var target = link.getAttribute('href');
+  if(!target) {
+    return;
+  }
+  el.addEventListener('click', function() {
+    location.href = target;
+  });
+});
+</script>
+</div>
+	</body>
 </html>
-=======
-	
-</body>
-</html>
->>>>>>> 53e44ddf27263567c9ab16a8a45fe267a966a093
