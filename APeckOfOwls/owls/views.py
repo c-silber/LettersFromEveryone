@@ -6,3 +6,6 @@ from django.template import loader
 def index(request):
 	template=loader.get_template('index.html')
 	return HttpResponse(template.render())
+
+def about_us(request):
+	return HttpResponse("We are a grassroots organization that sends postcards.")
