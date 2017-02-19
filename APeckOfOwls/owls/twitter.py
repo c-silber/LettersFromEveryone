@@ -17,7 +17,6 @@ tone_analyzer = ToneAnalyzerV3(
 	version='2016-02-11'
 )
 
-#print(json.dumps(tone_analyzer.tone(text='Just gave a speech about how much I rock'), indent=2))
 lis = [833050081641234435] ## this is the latest starting tweet id
 for i in range (0, 16):
 	user_timeline = twitter.get_user_timeline(screen_name="@realDonaldTrump", count=10, include_retweets=False, max_id=lis[-1])
